@@ -4,7 +4,7 @@ block contenido
     .contenido-principal
         h1 #{nombrePagina}
 
-        form.agregar-proyecto
+        form.agregar-proyecto(action="/nuevo-proyecto", method="POST") 
             .campo
                 label(for="nombre") Nombre del Proyecto:
                 input#nombre(type="text", name="nombre", placeholder="Nombre del Proyecto")
