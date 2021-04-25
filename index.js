@@ -2,6 +2,16 @@ const express = require('express');
 const routes = require('./routes');
 const path = require('path');
 
+// Crear la conección a la base de datos
+const db = require('./config/db');
+
+// Importal el modelo
+require('./models/Proyectos');
+
+db.sync()
+    .then(() => console.log('Conectado al Servidor'))
+    .catch((error) => console.log(error))
+
 // Crear una app de express
 const app = express();
 
