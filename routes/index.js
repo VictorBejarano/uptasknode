@@ -7,6 +7,5 @@ module.exports = function() {
     // Ruta para el home
     router.get('/', proyectosController.proyectosHome);
     router.get('/nuevo-proyecto', proyectosController.formularioProyectos);
-
     return router;
 }
