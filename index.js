@@ -14,6 +14,10 @@ app.set('view engine', 'pug');
 // Añadir la carpeta de las vistas
 app.set('views', path.join(__dirname, './views'));
 
+// Habilitar bodyParser para leer datos del formulario
+// bodyParser deprecated
+app.use(express.urlencoded({ extended: true }));
+
 app.use('/', routes());
 
 app.listen(3000);
